@@ -11,24 +11,13 @@ let correctAnswer = 'Sally Ride';
 //defined correctAnswer variable
 let candidateAnswer = '';
 //defined candidateAnswer
-let questions = [
-    'Who was the first American woman in space? ', 
-    'True or False: 5000 meteres = 5 kilometers. ', 
-    '(5+3)/2*10) = ? ', 
-    'Given the array [8, "Orbit", "Trajectory", 45], what entry is at index 2? ', 
-    'What is the minimum crew size fo the ISS? ',
-    ];
+let questions = ['Who was the first American woman in space? ', 'True or False: 5000 meteres = 5 kilometers. ', '(5+3)/2*10) = ? ', 'Given the array [8, "Orbit", "Trajectory", 45], what entry is at index 2? ', 'What is the minimum crew size fo the ISS? '];
 
-let correctAnswers = [
-    'Sally Ride',
-    'true',
-    '40',
-    'Trajectory',
-    '3'
-    ];
+let correctAnswers = ['Sally Ride', 'True', '40', 'Trajectory', '3'];
 
 //questions & correctAnswers are defined as empty arrays and filled with info in table
 let candidateAnswers = [];
+
 let score = 0;
 
 function askForName() {
@@ -59,16 +48,18 @@ function gradeQuiz(candidateAnswers) {
         }
       
     //   console.log(score)
-}
+    }
 
     let grade = ((score) / (questions.length)) * 100;
         console.log('>>> Overall Grade: '+ grade + '% (' + score + ' of 5 responses correct) <<<')
 
         if(grade >= 80){
-            console.log('>>> Status: PASSED')
+            console.log('>>> Status: PASSED<<<')
+            score = 0
         } else{
-            console.log('>>> Status: FAILED')
-        }
+            console.log('>>> Status: FAILED<<<')
+            score = 0
+        }//added score = 0 and <<< to end of status strings
     
     //console.log(grade)
         return grade;
