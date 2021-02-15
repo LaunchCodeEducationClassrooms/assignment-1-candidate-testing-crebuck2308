@@ -22,17 +22,16 @@ let score = 0;
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-    candidateName = input.question("Please enter your name: ");
+    candidateName = input.question("Candidate name:  ");
 };
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
     // answer = input.question(question);
     // candidateAnswer = console.log(answer);
     for(let i = 0; i < questions.length; i++){
-        answer = input.question((i + 1)+ ') ' + questions[i])
+        answer = input.question(`${i + 1})  ${questions[i]} \nYour answer:  `)
+        console.log(`Correct Answer:   ${correctAnswers[i]}\n\n`)
         candidateAnswers.push(answer)
-        console.log('Your answer: ' + answer)
-        console.log("Correct Answer: " + correctAnswers[i])
         //changed 'prompt' to 'answer to avoid confusion'
         console.log('\n')
     }
