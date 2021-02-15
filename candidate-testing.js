@@ -11,7 +11,7 @@ let correctAnswer = 'Sally Ride';
 //defined correctAnswer variable
 let candidateAnswer = '';
 //defined candidateAnswer
-let questions = ['Who was the first American woman in space? ', 'True or False: 5000 meteres = 5 kilometers. ', '(5+3)/2*10) = ? ', 'Given the array [8, "Orbit", "Trajectory", 45], what entry is at index 2? ', 'What is the minimum crew size for the ISS? '];
+let questions = ['Who was the first American woman in space? ', 'True or False: 5000 meters = 5 kilometers. ', '(5+3)/2*10) = ? ', 'Given the array [8, "Orbit", "Trajectory", 45], what entry is at index 2? ', 'What is the minimum crew size for the ISS? '];
 
 let correctAnswers = ['Sally Ride', 'true', '40', 'Trajectory', '3'];
 
@@ -54,10 +54,10 @@ function gradeQuiz(candidateAnswers) {
         console.log('>>> Overall Grade: '+ grade + '% (' + score + ' of 5 responses correct) <<<')
 
         if(grade >= 80){
-            console.log('>>> Status: PASSED<<<')
+            console.log('>>> Status: PASSED <<<')
             score = 0
         } else{
-            console.log('>>> Status: FAILED<<<')
+            console.log('>>> Status: FAILED <<<')
             score = 0
         }//added score = 0 and <<< to end of status strings
     
@@ -68,9 +68,10 @@ function gradeQuiz(candidateAnswers) {
 function runProgram() {
   askForName();
   // TODO 1.1c: Ask for candidate's name //
-  console.log('Candidate Name: ' + candidateName +'\n');
+//   console.log('Candidate Name: ' + candidateName +'\n');
   askQuestion();
   gradeQuiz(this.candidateAnswers);
+
 }
 
 // Don't write any code below this line //
