@@ -11,9 +11,9 @@ let correctAnswer = 'Sally Ride';
 //defined correctAnswer variable
 let candidateAnswer = '';
 //defined candidateAnswer
-let questions = ['Who was the first American woman in space? ', 'True or False: 5000 meteres = 5 kilometers. ', '(5+3)/2*10) = ? ', 'Given the array [8, "Orbit", "Trajectory", 45], what entry is at index 2? ', 'What is the minimum crew size fo the ISS? '];
+let questions = ['Who was the first American woman in space? ', 'True or False: 5000 meteres = 5 kilometers. ', '(5+3)/2*10) = ? ', 'Given the array [8, "Orbit", "Trajectory", 45], what entry is at index 2? ', 'What is the minimum crew size for the ISS? '];
 
-let correctAnswers = ['Sally Ride', 'True', '40', 'Trajectory', '3'];
+let correctAnswers = ['Sally Ride', 'true', '40', 'Trajectory', '3'];
 
 //questions & correctAnswers are defined as empty arrays and filled with info in table
 let candidateAnswers = [];
