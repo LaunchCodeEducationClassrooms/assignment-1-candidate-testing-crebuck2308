@@ -29,14 +29,13 @@ function askQuestion() {
     // answer = input.question(question);
     // candidateAnswer = console.log(answer);
     for(let i = 0; i < questions.length; i++){
-        answer = input.question(`${i + 1}) ${questions[i]} \nYour answer: `)
-        console.log(`Correct Answer: ${correctAnswers[i]}\n`)
-        candidateAnswers.push(answer)
+        answer = input.question(`${i + 1})  ${questions[i]} \nYour answer:  `)
+        console.log(`Correct Answer:  ${correctAnswers[i]}\n`);
+        candidateAnswers.push(answer);
         //changed 'prompt' to 'answer to avoid confusion'
     }
-        // console.log(candidateAnswers)
 }
-//removed unneccessary variable
+
 
 function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly //
@@ -44,25 +43,32 @@ function gradeQuiz(candidateAnswers) {
         if (correctAnswers[j].toLowerCase() === candidateAnswers[j].toLowerCase()){
                 score += 1
         }
+      
     //   console.log(score)
     }
 
-    let grade = score/questions.length*100;
-    let status = 'FAILED';
+    let grade = ((score) / (questions.length)) * 100;
+        console.log('>>> Overall Grade: '+ grade + '% (' + score + ' of 5 responses correct) <<<')
 
-    if(grade >= 80){
-        status = 'PASSED'
-        } 
-    console.log(`>>> Overall Grade: ${grade}% (${score} of 5 responses correct) <<<`)
-    console.log(`>>> Status: ${status} <<<`)
-    return grade;
+        if(grade >= 80){
+            console.log('>>> Status: PASSED <<<')
+            score = 0
+        } else{
+            console.log('>>> Status: FAILED <<<')
+            score = 0
+        }//added score = 0 and <<< to end of status strings
+    
+    //console.log(grade)
+        return grade;
 }
 
 function runProgram() {
   askForName();
   // TODO 1.1c: Ask for candidate's name //
+//   console.log('Candidate Name: ' + candidateName +'\n');
   askQuestion();
   gradeQuiz(this.candidateAnswers);
+
 }
 
 // Don't write any code below this line //
