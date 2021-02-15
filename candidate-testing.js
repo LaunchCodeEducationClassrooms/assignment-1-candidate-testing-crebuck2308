@@ -29,7 +29,7 @@ function askQuestion() {
     // answer = input.question(question);
     // candidateAnswer = console.log(answer);
     for(let i = 0; i < questions.length; i++){
-        answer = input.question(`${i+1}) `+ questions[i])
+        answer = input.question((i + 1)+ ') ' + questions[i])
         candidateAnswers.push(answer)
         console.log('Your answer: ' + answer)
         console.log("Correct Answer: " + correctAnswers[i])
